@@ -14,6 +14,12 @@
 	<string>kitmir</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Galeriye Erişmemiz gerekiyor</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Kameraya Erişmemiz gerekiyor</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Mikrofona Erişmemiz gerekiyor</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>

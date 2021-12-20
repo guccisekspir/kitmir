@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "409308627391",
+    "project_id": "kitmirco",
+    "storage_bucket": "kitmirco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409308627391:android:439d0740c59e5491b1210a",
+        "android_client_info": {
+          "package_name": "com.sekspir.kitmir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409308627391-dhdb4soin991d9gd692cpv6or72terjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdR57_XYDEZ_pS__MYYgMKzP4Md1-MJHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409308627391-dhdb4soin991d9gd692cpv6or72terjj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "409308627391-hpodedbgvs85caaneehv975b044jdsit.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sekspir.kitmir"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
