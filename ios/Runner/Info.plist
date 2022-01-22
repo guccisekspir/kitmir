@@ -14,20 +14,26 @@
 	<string>kitmir</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Galeriye Erişmemiz gerekiyor</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Kameraya Erişmemiz gerekiyor</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Mikrofona Erişmemiz gerekiyor</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(FLUTTER_BUILD_NAME)</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Kameraya Erişmemiz gerekiyor</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Mikrofona Erişmemiz gerekiyor</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Galeriye Erişmemiz gerekiyor</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
