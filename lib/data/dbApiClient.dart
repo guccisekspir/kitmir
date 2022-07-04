@@ -56,13 +56,13 @@ class DatabaseApiClient {
 
       QuerySnapshot snapshot = await firestore.collection("doges").get();
 
-      List<Map> anan = [];
+      List<Map> dogeListt = [];
 
       for (var element in snapshot.docs) {
         if (element.exists) {
           log("element exits");
           dogeList.add(Doge.fromMap(element.data() as Map<String, dynamic>));
-          anan.add(element.data() as Map<String, dynamic>);
+          dogeListt.add(element.data() as Map<String, dynamic>);
         }
       }
 

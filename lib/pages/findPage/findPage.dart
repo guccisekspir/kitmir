@@ -176,7 +176,7 @@ class _FindPageState extends State<FindPage> {
               ),
               Container(
                 height: sizeHelper.height! * 0.05,
-                width: sizeHelper.width! * 0.8,
+                width: sizeHelper.width! * 0.85,
                 decoration: BoxDecoration(
                     color: themeHelper.backgroundColor.withGreen(100), borderRadius: BorderRadius.circular(20)),
                 child: Row(

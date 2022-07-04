@@ -46,7 +46,6 @@ abstract class Classifier {
     try {
       interpreter = await Interpreter.fromAsset(modelName, options: _interpreterOptions);
       print('Interpreter Created Successfully');
-
       _inputShape = interpreter.getInputTensor(0).shape;
       _outputShape = interpreter.getOutputTensor(0).shape;
       _inputType = interpreter.getInputTensor(0).type;

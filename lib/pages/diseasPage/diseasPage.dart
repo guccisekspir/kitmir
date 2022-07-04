@@ -37,7 +37,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
         child: SafeArea(
           child: Column(
             children: [
-              Text("Rehber İçerikler"),
+              const Text("Rehber İçerikler"),
               SizedBox(
                 height: sizeHelper.height! * 0.05,
                 width: sizeHelper.width! * 0.6,
@@ -65,7 +65,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    Container(
+                    SizedBox(
                       height: sizeHelper.height! * 0.75,
                       width: sizeHelper.width,
                       child: Padding(
@@ -87,7 +87,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
                                       ),
                                     );
                                   },
-                                  child: Container(
+                                  child: SizedBox(
                                     height: sizeHelper.height! * 0.2,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(30),
@@ -102,7 +102,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
                             }),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: sizeHelper.height! * 0.75,
                       width: sizeHelper.width,
                       child: Padding(
@@ -124,7 +124,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
                                       ),
                                     );
                                   },
-                                  child: Container(
+                                  child: SizedBox(
                                     height: sizeHelper.height! * 0.2,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(30),
@@ -139,7 +139,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
                             }),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: sizeHelper.height! * 0.75,
                       width: sizeHelper.width,
                       child: Padding(
@@ -161,7 +161,7 @@ class _DiseasePageState extends State<DiseasePage> with SingleTickerProviderStat
                                       ),
                                     );
                                   },
-                                  child: Container(
+                                  child: SizedBox(
                                     height: sizeHelper.height! * 0.2,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(30),

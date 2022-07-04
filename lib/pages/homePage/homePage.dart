@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                 }).toList(),
               ),
             ),
-            TitleWidget(title: "Öne Çıkan Cinsler"),
+            const TitleWidget(title: "Öne Çıkan Cinsler"),
             firstlyDoges != null
                 ? SizedBox(
                     height: (sizeHelper.height! * 0.3) * (firstlyDoges!.length) / 2,
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                       children: firstlyDoges!.map((e) => DogeSmallWidget(currentDoge: e)).toList(),
                     ))
                 : const SizedBox(),
-            SizedBox(
+            const SizedBox(
               height: 200,
             )
           ],

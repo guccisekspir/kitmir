@@ -111,7 +111,7 @@ class _LandPageState extends State<LandPage> with SingleTickerProviderStateMixin
 
           Future.delayed(const Duration(milliseconds: 1500)).then((value) => {
                 debugPrint("gidiyo"),
-                WidgetsBinding.instance!.addPostFrameCallback((_) {
+                WidgetsBinding.instance?.addPostFrameCallback((_) {
                   Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(builder: (context) => WithPages()), (Route<dynamic> route) => false);
                 })
@@ -133,7 +133,8 @@ class _LandPageState extends State<LandPage> with SingleTickerProviderStateMixin
               Future.delayed(const Duration(milliseconds: 3000)).then((value) => {
                     WidgetsBinding.instance!.addPostFrameCallback((_) {
                       Navigator.of(context).pushAndRemoveUntil(
-                          MaterialPageRoute(builder: (context) => NavigationPage()), (Route<dynamic> route) => false);
+                          MaterialPageRoute(builder: (context) => const NavigationPage()),
+                          (Route<dynamic> route) => false);
                     })
                   });
             }
@@ -148,11 +149,11 @@ class _LandPageState extends State<LandPage> with SingleTickerProviderStateMixin
               color: ThemeHelper().backgroundColor,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              child: Container(
+              child: SizedBox(
                 height: SizeHelper().height,
                 width: SizeHelper().width,
                 child: _splashArtboard != null
-                    ? RiveAnimation.asset(
+                    ? const RiveAnimation.asset(
                         "assets/rives/kitmirSplash.riv",
                         animations: ["Alltoghteher"],
                       )
@@ -282,7 +283,7 @@ class _WithPages extends State<WithPages> {
             width: SizeHelper().height! * 0.3,
             child: Image.asset(
               'assets/3.png',
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           ),
           Column(
@@ -317,7 +318,7 @@ class _WithPages extends State<WithPages> {
             width: SizeHelper().height! * 0.3,
             child: Image.asset(
               'assets/4.png',
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           ),
           Column(
@@ -349,13 +350,13 @@ class _WithPages extends State<WithPages> {
       ),
     );
     double zoom = 1.0 + (2.0 - 1.0) * selectedness;
-    return Container(
+    return SizedBox(
       width: 25.0,
       child: Center(
         child: Material(
           color: ThemeHelper().primaryColor,
           type: MaterialType.circle,
-          child: Container(
+          child: SizedBox(
             width: 8.0 * zoom,
             height: 8.0 * zoom,
           ),
@@ -371,7 +372,7 @@ class _WithPages extends State<WithPages> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Container(
+          SizedBox(
             width: sizeHelper.width,
             height: sizeHelper.height,
             child: LiquidSwipe(
@@ -389,10 +390,10 @@ class _WithPages extends State<WithPages> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               children: <Widget>[
-                Expanded(child: SizedBox()),
+                const Expanded(child: const SizedBox()),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List<Widget>.generate(pages.length, _buildDot),
@@ -406,8 +407,8 @@ class _WithPages extends State<WithPages> {
               padding: const EdgeInsets.all(10.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context)
-                      .pushAndRemoveUntil(MaterialPageRoute(builder: (context) => NavigationPage()), (route) => false);
+                  Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => const NavigationPage()), (route) => false);
                 },
                 child: ConstrainedBox(
                   constraints: BoxConstraints(

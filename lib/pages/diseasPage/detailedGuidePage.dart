@@ -49,7 +49,7 @@ class DetailedGuidePage extends StatelessWidget {
                               constraints: BoxConstraints(maxHeight: sizeHelper.height!),
                               child: AutoSizeText(e.subtitle!),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             )
                           ],

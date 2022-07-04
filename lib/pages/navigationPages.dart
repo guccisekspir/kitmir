@@ -3,10 +3,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kitmir/blocs/navBarbBloc.dart';
 import 'package:kitmir/helpers/sizeHelper.dart';
@@ -14,9 +11,6 @@ import 'package:kitmir/helpers/themeHelper.dart';
 import 'package:kitmir/pages/diseasPage/diseasPage.dart';
 import 'package:kitmir/pages/findPage/findPage.dart';
 import 'package:kitmir/pages/homePage/homePage.dart';
-import 'package:kitmir/pages/profilePage/profilePage.dart';
-import 'package:line_icons/line_icon.dart';
-import 'package:line_icons/line_icons.dart';
 
 import 'package:rive/rive.dart' hide LinearGradient;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -122,11 +116,11 @@ class _NavigationPageState extends State<NavigationPage> with WidgetsBindingObse
           if (snapshot.hasData) {
             switch (snapshot.data!) {
               case NavBarItem.HOME:
-                return HomePage();
+                return const HomePage();
               case NavBarItem.FIND:
-                return FindPage();
+                return const FindPage();
               case NavBarItem.DISEAS:
-                return DiseasePage();
+                return const DiseasePage();
               /*case NavBarItem.PROFILE:
                 return ProfilePage();*/
             }
@@ -140,7 +134,7 @@ class _NavigationPageState extends State<NavigationPage> with WidgetsBindingObse
           initialData: _bottomNavBarBloc.defaultItem,
           builder: (context, snapshot) {
             return AnimatedBottomNavigationBar.builder(
-              backgroundColor: Color(0XFF252F48),
+              backgroundColor: const Color(0XFF252F48),
               splashColor: themeHelper.primaryColor,
               activeIndex: bottomNavBarIndex,
               gapLocation: GapLocation.none,
